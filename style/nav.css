@@ -55,10 +55,3 @@ nav .nav-container ul {
   display: flex;
   gap: 1em;
 }
-
-main {
-  margin: 0 auto;
-}
-main .hero-section {
-  max-width: 978px;
-}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+    --bg-dark: #18191a;
+    --bg-primary: #242526;
+    --bg-secondary: #3a3b3c;
+    --text-color: #e4e6eb;
+    --secondary-text-color: #aaaaaa;
+    --color-blue: #3462b8;
+    --color-lblue: #72b4ee;
+}
+
+main {
+    margin: 0 auto;
+
+    .search-section {
+        position: sticky;
+        top: 0;
+        margin-top: 4em;
+        .search-container {
+            margin: 0 auto;
+            min-height: 300px;
+            max-width: 730px;
+           
+            .search-box {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid var(--bg-secondary);
+                background-color: var(--bg-primary);
+                border-radius: 1em;
+                padding: 2em;
+
+                span {
+                    font-size: 2em;
+                    text-transform: capitalize;
+                    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                    margin-bottom: 0.5em;
+                }
+                .search-bar {
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    width: 100%;
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 1.5em;
+                        padding: 0.3em 0.5em;
+                        border: none;
+                        outline: none;
+                        background-color: var(--bg-secondary);
+                        color: var(--text-color);
+                    }
+                    i {
+                        position: absolute;
+                        font-size: 1.5em;
+                        right: 13px;
+                        transition: ease-out 0.3s;
+                        cursor: pointer;
+                        &:hover {
+                            color: var(--color-blue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .result-section {
+        padding: 0.5em;
+        min-height: 100vh;
+        .result-container {
+            margin: 0 auto;
+            max-width: 1080px;
+
+            .word-box {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+
+                h2 {
+                    font-size: 2.5em;
+                }
+                .audio {
+                    background-color: var(--bg-secondary);
+                    width: 3em;
+                    height: 3em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: 2em;
+                    transition: ease-in-out 0.1s;
+
+                    &:hover {
+                        i {
+                            color: var(--color-blue);
+                        }
+                        background-color: var(--bg-primary);
+                    }
+                    i {
+                        transition: ease-in-out 0.1s;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+
+            .phonetics {
+                margin-bottom: 1.5em;
+
+                .phonetics-span {
+                    color: var(--secondary-text-color);
+                    text-decoration: underline;
+                }
+            }
+
+            .buttons {
+                border-bottom: solid 1px var(--bg-primary);
+                .button {
+                    background-color: var(--bg-secondary);
+                    border: none;
+                    font-size: 1.2em;
+                    color: var(--text-color);
+                    padding: 0.5em 1em;
+                    border-radius: 1em 1em 0em 0em;
+                    cursor: pointer;
+                    transition: ease-in 0.1s;
+
+                    &:hover {
+                        color: var(--color-lblue);
+                        background-color: var(--bg-primary);
+                    }
+                }
+
+                .active {
+                    background-color: var(--bg-primary);
+                    border-bottom: 4px solid var(--color-blue);
+                }
+            }
+        }
+    }
+}

@@ -2,14 +2,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     getDataResponse();
-          
-  });
+        
+});
   
   // get the response
   async function getDataResponse(){
       try{
           const dataResponse = await getApiResponse("fast");
-          seeData(dataResponse);
+            seeData(dataResponse);
       }catch(error){
           console.error(error);
       }
@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   }
   
-  function seeData(data){
-      console.log(data);
+  function seeData(dataResponse){
+        console.log(dataResponse);
   }

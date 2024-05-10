@@ -6,8 +6,74 @@
     <title>Word Spy: Explore the Meanings of Words</title>
     <script src="https://kit.fontawesome.com/fbe184ea4b.js" crossorigin="anonymous"></script>
     <link href="../style/search.css" rel="stylesheet">
+    <link href="../style/nav.css" rel="stylesheet">
 </head>
 <body>
-    <script src="../scripts/search.js"></script>
+    <!---NAVIGATION----->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fa-solid fa-book"></i>
+                <span>WordSpy</span>
+            </div>
+            <ul>
+                <li><a href="/pages/home.html">About Us</a></li>
+                <li><a href="/pages/home.html">Team</a></li>
+            </ul>
+        </div>
+    </nav> 
+    <main>
+        <!--SEARCH CONTAINER-->
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <span>Get the Definition</span>
+                    <div class="search-bar">
+                        <input type="text" id="wordInput" autocomplete="off">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---Result Section-->
+        <div class="result-section">
+            <div class="result-container">
+                   <!--word box-->
+                <div class="word-box">
+                    <h2><span id="search-word">Hello </span>Definition</h2>
+                    <div class="audio">
+                        <i class="fa-solid fa-volume-high" id="word-audio"></i>
+                    </div>
+                    
+                </div>
+                <div class="phonetics">
+                    <!--create span element for every phonetics-->
+                    <span class="phonetics-span">həˈləʊ</span>
+                </div>
+                <div class="buttons">
+                    <button class="button active" id="meanings">Meanings</button>
+                    <button class="button" id="Synonyms">Synonyms</button>
+                    <button class="button" id="Sentences">Sentences</button>
+                </div>
+                <div class="partOfSpeech-container">
+                    <div class="partOfSpeech-scroll">
+                        <!-- create a element and define their href-->
+                        <!--origin,adjective,noun,adverb,verb,interjection-->
+                        <a href="">interjection</a>
+                    </div>
+                </div>
+                <!---create div for every part of speech result -->
+                <div class="definition-container">
+                    <div class="partofSpeech-title"></div>
+                    <div class="partofSpeech-card"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="../scripts/search.js"></script>    
+
 </body>
 </html>
