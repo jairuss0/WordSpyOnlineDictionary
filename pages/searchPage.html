@@ -14,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <i class="fa-solid fa-book"></i>
-                <span>WordSpy</span>
+                <span class="span1">Word</span><span>Spy</span>
             </div>
             <ul>
                 <li><a href="/pages/home.html">About Us</a></li>
@@ -27,10 +27,9 @@
         <div class="search-section">
             <div class="search-container">
                 <div class="search-box">
-                   
                     <div class="search-bar">
-                        <input type="text" id="wordInput" autocomplete="off">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="wordInput" autocomplete="off" placeholder="type to search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
                     </div>
                 </div>
             </div>
@@ -39,9 +38,9 @@
         <!---Result Section-->
         <div class="result-section">
             <div class="result-container">
-                   <!--word box-->
+                <!--word box-->
                 <div class="word-box">
-                    <h2><span id="search-word"><em>Hello</em> </span>Definition</h2>
+                    <h2><span id="search-word"></span></h2>
                     <div class="audio">
                         <i class="fa-solid fa-volume-high" id="word-audio"></i>
                     </div>
@@ -49,7 +48,6 @@
                 </div>
                 <div class="phonetics">
                     <!--create span element for every phonetics-->
-                    <span class="phonetics-span">həˈləʊ</span>
                 </div>
                 <div class="buttons">
                     <button class="button active" id="meanings" data-id="meanings">Meanings</button>
@@ -59,13 +57,10 @@
                 <div class="partOfSpeech-container">
                     <div class="partOfSpeech-scroll">
                         <!-- create a element and define their href-->
-                        <!--origin,adjective,noun,adverb,verb,interjection-->
-                        <a href="" class="link-partOfSpeech">interjection</a>
-                        <a href="" class="link-partOfSpeech">origin</a>
-                        <a href="" class="link-partOfSpeech">adjective</a>
-                        <a href="" class="link-partOfSpeech">noun</a>
-                        <a href="" class="link-partOfSpeech">adverb</a>
-                        <a href="" class="link-partOfSpeech">verb</a>
+                        <!--adjective,noun,adverb,verb,interjection-->
+                        
+                       
+                        
                     </div>
                 </div>
                 <!---MEANING-->
@@ -74,16 +69,8 @@
                     <div class="definition-container">
                         <div class="partofSpeech-title"><span class="title-partOfSpeech">Interjection</span></div>
                         <div class="partOfSpeech-card">
-                            <span>Used as a Greeting or response, as in telephoning.</span>
-                        </div>
-                        <div class="partOfSpeech-card">
-                            <span>Used as a Greeting or response, as in telephoning.</span>
-                         </div>
-                        <div class="partOfSpeech-card">
-                            <span>Used as a Greeting or response, as in telephoning.</span>
-                        </div>
-                        <div class="partOfSpeech-card">
-                            <span>Used as a Greeting or response, as in telephoning.</span>
+                            <span class="partOfSpeech-definition">Used as a Greeting or response, as in telephoning.</span><br>
+                            <span class="partOfSpeech-example-sentence">hello, everyone.</span>
                         </div>
                     </div>
                     <!--create span for every synonyms and Antonyms-->
@@ -95,8 +82,7 @@
                         Antonyms:
                         
                     </div>
-
-
+                    
                 </div>
                 
             </div>

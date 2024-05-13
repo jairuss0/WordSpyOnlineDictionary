@@ -82,6 +82,11 @@ main .result-section .result-container .word-box {
 main .result-section .result-container .word-box h2 {
   font-size: 2.5em;
 }
+main .result-section .result-container .word-box #search-word {
+  -webkit-text-emphasis: inherit;
+          text-emphasis: inherit;
+  text-transform: capitalize;
+}
 main .result-section .result-container .word-box .audio {
   background-color: var(--bg-secondary);
   width: 3em;
@@ -183,10 +188,19 @@ main .result-section .meaning-content .definition-container .partOfSpeech-card {
   padding: 1em 0.5em;
   max-width: 890px;
 }
+main .result-section .meaning-content .definition-container .partOfSpeech-card .partOfSpeech-definition {
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+main .result-section .meaning-content .definition-container .partOfSpeech-card .partOfSpeech-example-sentence {
+  color: var(--secondary-text-color);
+  text-transform: capitalize;
+}
 main .result-section .meaning-content .synonyms-container {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3em;
+  max-width: 800px;
 }
 main .result-section .meaning-content .synonyms-container .synonym {
   background-color: var(--bg-primary);
@@ -199,6 +213,7 @@ main .result-section .meaning-content .antonym-container {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3em;
+  max-width: 800px;
 }
 main .result-section .meaning-content .antonym-container .antonym {
   background-color: var(--bg-primary);
