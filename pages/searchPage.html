@@ -27,7 +27,7 @@
         <div class="search-section">
             <div class="search-container">
                 <div class="search-box">
-                    <span>Get the Definition</span>
+                   
                     <div class="search-bar">
                         <input type="text" id="wordInput" autocomplete="off">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -41,7 +41,7 @@
             <div class="result-container">
                    <!--word box-->
                 <div class="word-box">
-                    <h2><span id="search-word">Hello </span>Definition</h2>
+                    <h2><span id="search-word"><em>Hello</em> </span>Definition</h2>
                     <div class="audio">
                         <i class="fa-solid fa-volume-high" id="word-audio"></i>
                     </div>
@@ -52,22 +52,53 @@
                     <span class="phonetics-span">həˈləʊ</span>
                 </div>
                 <div class="buttons">
-                    <button class="button active" id="meanings">Meanings</button>
-                    <button class="button" id="Synonyms">Synonyms</button>
-                    <button class="button" id="Sentences">Sentences</button>
+                    <button class="button active" id="meanings" data-id="meanings">Meanings</button>
+                    <button class="button" id="Synonyms" data-id="synonyms">Synonyms</button>
+                    <button class="button" id="Sentences" data-id="sentences">Sentences</button>
                 </div>
                 <div class="partOfSpeech-container">
                     <div class="partOfSpeech-scroll">
                         <!-- create a element and define their href-->
                         <!--origin,adjective,noun,adverb,verb,interjection-->
-                        <a href="">interjection</a>
+                        <a href="" class="link-partOfSpeech">interjection</a>
+                        <a href="" class="link-partOfSpeech">origin</a>
+                        <a href="" class="link-partOfSpeech">adjective</a>
+                        <a href="" class="link-partOfSpeech">noun</a>
+                        <a href="" class="link-partOfSpeech">adverb</a>
+                        <a href="" class="link-partOfSpeech">verb</a>
                     </div>
                 </div>
-                <!---create div for every part of speech result -->
-                <div class="definition-container">
-                    <div class="partofSpeech-title"></div>
-                    <div class="partofSpeech-card"></div>
+                <!---MEANING-->
+                <div class="meaning-content">
+                    <!---create div for every part of speech result -->
+                    <div class="definition-container">
+                        <div class="partofSpeech-title"><span class="title-partOfSpeech">Interjection</span></div>
+                        <div class="partOfSpeech-card">
+                            <span>Used as a Greeting or response, as in telephoning.</span>
+                        </div>
+                        <div class="partOfSpeech-card">
+                            <span>Used as a Greeting or response, as in telephoning.</span>
+                         </div>
+                        <div class="partOfSpeech-card">
+                            <span>Used as a Greeting or response, as in telephoning.</span>
+                        </div>
+                        <div class="partOfSpeech-card">
+                            <span>Used as a Greeting or response, as in telephoning.</span>
+                        </div>
+                    </div>
+                    <!--create span for every synonyms and Antonyms-->
+                    <div class="synonyms-container">
+                        Synonyms: 
+                        
+                    </div>
+                    <div class="antonym-container">
+                        Antonyms:
+                        
+                    </div>
+
+
                 </div>
+                
             </div>
         </div>
     </main>

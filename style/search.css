@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
@@ -15,13 +16,13 @@ main {
 }
 main .search-section {
   position: sticky;
-  top: 0;
-  margin-top: 4em;
+  top: -5.5em;
 }
 main .search-section .search-container {
   margin: 0 auto;
   min-height: 300px;
   max-width: 730px;
+  align-content: center;
 }
 main .search-section .search-container .search-box {
   display: flex;
@@ -49,7 +50,7 @@ main .search-section .search-container .search-box .search-bar input {
   width: 100%;
   height: 40px;
   border-radius: 1.5em;
-  padding: 0.3em 0.5em;
+  padding: 0.5em 1em;
   border: none;
   outline: none;
   background-color: var(--bg-secondary);
@@ -129,4 +130,80 @@ main .result-section .result-container .buttons .button:hover {
 main .result-section .result-container .buttons .active {
   background-color: var(--bg-primary);
   border-bottom: 4px solid var(--color-blue);
+}
+main .result-section .result-container .partOfSpeech-container {
+  margin: 3em 0em;
+}
+main .result-section .result-container .partOfSpeech-container .partOfSpeech-scroll {
+  display: flex;
+  overflow-x: auto;
+  max-width: 500px;
+  overscroll-behavior: smooth;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+main .result-section .result-container .partOfSpeech-container .partOfSpeech-scroll::-webkit-scrollbar {
+  height: 7px; /* height of horizontal scrollbar ← You're missing this */
+  width: 7px; /* width of vertical scrollbar */
+}
+main .result-section .result-container .partOfSpeech-container .partOfSpeech-scroll::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--secondary-text-color);
+  border-radius: 5px;
+}
+main .result-section .result-container .partOfSpeech-container .link-partOfSpeech {
+  background-color: var(--bg-primary);
+  color: var(--secondary-text-color);
+  font-size: 1.2em;
+  border-radius: 1em;
+  padding: 0.3em 0.5em;
+  margin-left: 0.4em;
+  margin-bottom: 0.5em;
+}
+main .result-section .result-container .partOfSpeech-container .link-partOfSpeech:hover {
+  background-color: var(--bg-secondary);
+  color: var(--color-lblue);
+}
+main .result-section .meaning-content .definition-container {
+  margin: 2em 0em;
+  margin-top: 3em;
+}
+main .result-section .meaning-content .definition-container .partofSpeech-title {
+  margin-bottom: 1em;
+}
+main .result-section .meaning-content .definition-container .partofSpeech-title .title-partOfSpeech {
+  background-color: var(--color-blue);
+  color: var(--text-color);
+  font-size: 1.1em;
+  font-weight: light;
+  padding: 0.2em 0.5em;
+}
+main .result-section .meaning-content .definition-container .partOfSpeech-card {
+  border: 1px solid var(--bg-primary);
+  margin-bottom: 0.5em;
+  padding: 1em 0.5em;
+  max-width: 890px;
+}
+main .result-section .meaning-content .synonyms-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+}
+main .result-section .meaning-content .synonyms-container .synonym {
+  background-color: var(--bg-primary);
+  color: var(--secondary-text-color);
+  padding: 0.3em 0.5em;
+  margin-left: 0.5em;
+  border-radius: 1em;
+}
+main .result-section .meaning-content .antonym-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+}
+main .result-section .meaning-content .antonym-container .antonym {
+  background-color: var(--bg-primary);
+  color: var(--secondary-text-color);
+  padding: 0.2em 0.4em;
+  margin-left: 0.5em;
+  border-radius: 1em;
 }/*# sourceMappingURL=search.css.map */
