@@ -163,14 +163,17 @@ main .result-section .result-container .partOfSpeech-container .link-partOfSpeec
   padding: 0.3em 0.5em;
   margin-left: 0.4em;
   margin-bottom: 0.5em;
+  cursor: pointer;
+  transition: ease-out 0.2s;
 }
 main .result-section .result-container .partOfSpeech-container .link-partOfSpeech:hover {
   background-color: var(--bg-secondary);
   color: var(--color-lblue);
 }
-main .result-section .meaning-content .definition-container {
-  margin: 2em 0em;
-  margin-top: 3em;
+main .result-section .meaning-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 main .result-section .meaning-content .definition-container .partofSpeech-title {
   margin-bottom: 1em;
@@ -185,37 +188,42 @@ main .result-section .meaning-content .definition-container .partofSpeech-title 
 main .result-section .meaning-content .definition-container .partOfSpeech-card {
   border: 1px solid var(--bg-primary);
   margin-bottom: 0.5em;
-  padding: 1em 0.5em;
-  max-width: 890px;
+  padding: 1em 0.5em 1em 0.9em;
+  max-width: 910px;
+  display: flex;
+  flex-direction: column;
 }
 main .result-section .meaning-content .definition-container .partOfSpeech-card .partOfSpeech-definition {
   color: var(--text-color);
   text-transform: capitalize;
+  font-size: 1em;
+  font-weight: light;
 }
 main .result-section .meaning-content .definition-container .partOfSpeech-card .partOfSpeech-example-sentence {
   color: var(--secondary-text-color);
   text-transform: capitalize;
+  margin-top: 0.4em;
 }
-main .result-section .meaning-content .synonyms-container {
+main .result-section .meaning-content .definition-container .synonyms-container {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3em;
   max-width: 800px;
 }
-main .result-section .meaning-content .synonyms-container .synonym {
+main .result-section .meaning-content .definition-container .synonyms-container .synonym {
   background-color: var(--bg-primary);
   color: var(--secondary-text-color);
   padding: 0.3em 0.5em;
   margin-left: 0.5em;
   border-radius: 1em;
 }
-main .result-section .meaning-content .antonym-container {
+main .result-section .meaning-content .definition-container .antonym-container {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3em;
   max-width: 800px;
 }
-main .result-section .meaning-content .antonym-container .antonym {
+main .result-section .meaning-content .definition-container .antonym-container .antonym {
   background-color: var(--bg-primary);
   color: var(--secondary-text-color);
   padding: 0.2em 0.4em;
