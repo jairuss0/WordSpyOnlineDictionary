@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/fbe184ea4b.js" crossorigin="anonymous"></script>
     <link href="../style/search.css" rel="stylesheet">
     <link href="../style/nav.css" rel="stylesheet">
+    <link href="../style/footer.css" rel="stylesheet">
 </head>
 <body>
     <!---NAVIGATION----->
@@ -17,8 +18,8 @@
                 <span class="span1">Word</span><span>Spy</span>
             </div>
             <ul>
-                <li><a href="/pages/home.html">About Us</a></li>
-                <li><a href="/pages/home.html">Team</a></li>
+                <li><a href="../pages/home.html">About Us</a></li>
+                <li><a href="../pages/home.html">Team</a></li>
             </ul>
         </div>
     </nav> 
@@ -28,7 +29,7 @@
             <div class="search-container">
                 <div class="search-box">
                     <div class="search-bar">
-                        <input type="text" id="wordInput" autocomplete="off" placeholder="type to search">
+                        <input type="text" id="wordInput"  placeholder="type to search">
                         <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
                     </div>
                 </div>
@@ -39,8 +40,8 @@
         <div class="result-section">
             <div class="result-container">
                 <!--word box-->
-                <div class="word-box">
-                    <h2><span id="search-word"></span></h2>
+                <div class="word-box" id="searchedWord">
+                    <h2><span id="search-word"></span> Definition</h2>
                     <div class="audio">
                         <i class="fa-solid fa-volume-high" id="word-audio"></i>
                     </div>
@@ -49,6 +50,7 @@
                 <div class="phonetics">
                     <!--create span element for every phonetics-->
                 </div>
+                <!---TABS BUTTONS-->
                 <div class="buttons">
                     <button class="button active" id="meanings" data-id="meanings">Meanings</button>
                     <button class="button" id="Synonyms" data-id="synonyms">Synonyms</button>
@@ -63,24 +65,25 @@
                 <!---MEANING-->
                 <div class="meaning-content">
                     <!---create div for every part of speech result -->
-                    <div class="definition-container">
-                        
-                        <!--create span for every synonyms and Antonyms-->
-                        <div class="synonyms-container">
-                            Synonyms: 
-                        
-                        </div>
-                        <div class="antonym-container">
-                            Antonyms:
-                            
-                        </div>
-                    </div>
                     
+                        <!--create div card for the definitions and example-->
+                        <!--create span for every synonyms and Antonyms-->            
                 </div>
                 
             </div>
+            <!---ERROR DISPLAY--->
+            <div class="error-container">
+                
+            </div>
+            
         </div>
     </main>
+    <footer>
+        <div class="footer-container">
+            <p><em>Copyright © 2024 https://dictionaryapi.dev/
+                All Rights Reserved</em></p>
+        </div>
+    </footer>
 
 
     <script src="../scripts/search.js"></script>    

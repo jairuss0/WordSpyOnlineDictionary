@@ -8,20 +8,21 @@
     --secondary-text-color: #aaaaaa;
     --color-blue: #3462b8;
     --color-lblue: #72b4ee;
+    --text-muted:  #404142;
 }
 
 main {
     margin: 0 auto;
 
     .search-section {
-        position: sticky;
-        top: -5.5em;
+        // position: sticky;
+        //top: -5.5em;
         .search-container {
             margin: 0 auto;
             min-height: 300px;
             max-width: 730px;
             align-content: center;
-
+            padding: 1em;
             .search-box {
                 display: flex;
                 justify-content: center;
@@ -30,7 +31,7 @@ main {
                 border: 1px solid var(--bg-secondary);
                 background-color: var(--bg-primary);
                 border-radius: 1em;
-                padding: 2em;
+                padding: 1.5em;
 
                 span {
                     font-size: 2em;
@@ -53,6 +54,13 @@ main {
                         background-color: var(--bg-secondary);
                         color: var(--text-color);
                     }
+                    input:-webkit-autofill, // removes the autofill color
+                    input:-webkit-autofill:hover,
+                    input:-webkit-autofill:focus,
+                    input:-webkit-autofill:active {
+                        -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+                        -webkit-transition-delay: 9999s;
+                    }
                     i {
                         position: absolute;
                         font-size: 1.5em;
@@ -73,10 +81,35 @@ main {
     .result-section {
         padding: 0.5em;
         min-height: 100vh;
+        align-content: center;
+        // ERROR STYLE
+        .error-container{
+            margin: 0 auto;
+            max-width: fit-content;
+            
+            .error-box-message{
+                text-align: center;
+                padding: 1em;
+                .error-img{
+                    object-fit: cover;
+                    max-width: 400px;
+                }
+                .error-404{
+                    font-size: 2em;
+                    
+                }
+                .error-message{
+                    color: var(--text-muted);
+                }
+            }
+        }
+        .error-active{
+            display: none;
+        }
         .result-container {
             margin: 0 auto;
             max-width: 1080px;
-
+            
             .word-box {
                 display: flex;
                 align-items: center;
@@ -176,7 +209,7 @@ main {
                     margin-left: 0.4em;
                     margin-bottom: 0.5em;
                     cursor: pointer;
-                    transition: ease-out .2s;
+                    transition: ease-out 0.2s;
                     &:hover {
                         background-color: var(--bg-secondary);
                         color: var(--color-lblue);
@@ -189,9 +222,10 @@ main {
         .meaning-content {
             display: flex;
             flex-direction: column;
-            gap: 2em;
+            gap: 7em;
+    
             .definition-container {
-                
+                margin-top: 3em;
                 .partofSpeech-title {
                     margin-bottom: 1em;
 
@@ -207,7 +241,7 @@ main {
                 .partOfSpeech-card {
                     border: 1px solid var(--bg-primary);
                     margin-bottom: 0.5em;
-                    padding: 1em .5em 1em .9em;
+                    padding: 1em 0.5em 1em 0.9em;
                     max-width: 910px;
                     display: flex;
                     flex-direction: column;
@@ -222,8 +256,8 @@ main {
                     .partOfSpeech-example-sentence {
                         color: var(--secondary-text-color);
                         text-transform: capitalize;
-                        
-                        margin-top: .4em;
+
+                        margin-top: 0.4em;
                     }
                 }
 
@@ -231,28 +265,34 @@ main {
                 .synonyms-container {
                     display: flex;
                     flex-wrap: wrap;
-                    margin-bottom: 3em;
+                    margin-bottom: 1.5em;
                     max-width: 800px;
+                    align-items: center;
                     .synonym {
                         background-color: var(--bg-primary);
                         color: var(--secondary-text-color);
                         padding: 0.3em 0.5em;
                         margin-left: 0.5em;
                         border-radius: 1em;
+                        margin-bottom: .5em;
+                        margin-top: .5em;
                     }
                 }
                 // antonyms
                 .antonym-container {
                     display: flex;
                     flex-wrap: wrap;
-                    margin-bottom: 3em;
+                    margin-bottom: 1.5em;
                     max-width: 800px;
+                    align-items: center;
                     .antonym {
                         background-color: var(--bg-primary);
                         color: var(--secondary-text-color);
                         padding: 0.2em 0.4em;
                         margin-left: 0.5em;
                         border-radius: 1em;
+                        margin-bottom: .5em;
+                        margin-top: .5em;
                     }
                 }
             }

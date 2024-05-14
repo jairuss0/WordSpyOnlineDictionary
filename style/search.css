@@ -9,20 +9,18 @@
   --secondary-text-color: #aaaaaa;
   --color-blue: #3462b8;
   --color-lblue: #72b4ee;
+  --text-muted: #404142;
 }
 
 main {
   margin: 0 auto;
-}
-main .search-section {
-  position: sticky;
-  top: -5.5em;
 }
 main .search-section .search-container {
   margin: 0 auto;
   min-height: 300px;
   max-width: 730px;
   align-content: center;
+  padding: 1em;
 }
 main .search-section .search-container .search-box {
   display: flex;
@@ -32,7 +30,7 @@ main .search-section .search-container .search-box {
   border: 1px solid var(--bg-secondary);
   background-color: var(--bg-primary);
   border-radius: 1em;
-  padding: 2em;
+  padding: 1.5em;
 }
 main .search-section .search-container .search-box span {
   font-size: 2em;
@@ -56,6 +54,13 @@ main .search-section .search-container .search-box .search-bar input {
   background-color: var(--bg-secondary);
   color: var(--text-color);
 }
+main .search-section .search-container .search-box .search-bar input:-webkit-autofill,
+main .search-section .search-container .search-box .search-bar input:-webkit-autofill:hover,
+main .search-section .search-container .search-box .search-bar input:-webkit-autofill:focus,
+main .search-section .search-container .search-box .search-bar input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
 main .search-section .search-container .search-box .search-bar i {
   position: absolute;
   font-size: 1.5em;
@@ -69,6 +74,30 @@ main .search-section .search-container .search-box .search-bar i:hover {
 main .result-section {
   padding: 0.5em;
   min-height: 100vh;
+  align-content: center;
+}
+main .result-section .error-container {
+  margin: 0 auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+main .result-section .error-container .error-box-message {
+  text-align: center;
+  padding: 1em;
+}
+main .result-section .error-container .error-box-message .error-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 400px;
+}
+main .result-section .error-container .error-box-message .error-404 {
+  font-size: 2em;
+}
+main .result-section .error-container .error-box-message .error-message {
+  color: var(--text-muted);
+}
+main .result-section .error-active {
+  display: none;
 }
 main .result-section .result-container {
   margin: 0 auto;
@@ -173,7 +202,10 @@ main .result-section .result-container .partOfSpeech-container .link-partOfSpeec
 main .result-section .meaning-content {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 7em;
+}
+main .result-section .meaning-content .definition-container {
+  margin-top: 3em;
 }
 main .result-section .meaning-content .definition-container .partofSpeech-title {
   margin-bottom: 1em;
@@ -207,8 +239,9 @@ main .result-section .meaning-content .definition-container .partOfSpeech-card .
 main .result-section .meaning-content .definition-container .synonyms-container {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
   max-width: 800px;
+  align-items: center;
 }
 main .result-section .meaning-content .definition-container .synonyms-container .synonym {
   background-color: var(--bg-primary);
@@ -216,12 +249,15 @@ main .result-section .meaning-content .definition-container .synonyms-container 
   padding: 0.3em 0.5em;
   margin-left: 0.5em;
   border-radius: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 main .result-section .meaning-content .definition-container .antonym-container {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
   max-width: 800px;
+  align-items: center;
 }
 main .result-section .meaning-content .definition-container .antonym-container .antonym {
   background-color: var(--bg-primary);
@@ -229,4 +265,6 @@ main .result-section .meaning-content .definition-container .antonym-container .
   padding: 0.2em 0.4em;
   margin-left: 0.5em;
   border-radius: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }/*# sourceMappingURL=search.css.map */

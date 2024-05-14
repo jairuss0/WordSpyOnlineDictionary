@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --bg-dark: #18191A;
+  --bg-primary: #242526;
+  --bg-secondary: #3A3B3C;
+  --text-color: #E4E6EB;
+  --secondary-text-color: #AAAAAA;
+  --color-blue: #3462b8;
+}
+
+footer{
+    margin-top: 5em;
+    background-color: var(--bg-dark);
+    border-top: solid 3px var(--bg-secondary);
+    min-height: 100px;
+    align-content: center;
+}
+
+footer .footer-container{
+    margin: 0 auto;
+    color: #4f4f4f;
+    text-align: center;
+    
+    
+}
+
