@@ -9,17 +9,14 @@ const navLogo = document.querySelector(".nav-logo");
 const resultSection = document.querySelector(".result-section");
 // result - container
 const resultContainer = document.querySelector(".result-container");
-
-let WORD;
-
-navLogo.addEventListener("click", () => {
-  window.location = "../pages/home.html";
-});
+const errorContainer = document.querySelector(".error-container");
 
 // load the word attributes, meanings etc if user click the icon
 searchIcon.addEventListener("click", (e) => {
   if (inputWord.value.length != 0) {
     e.preventDefault();
+
+    location.replace("searchPage.html#searchedWord");
     getDataResponse();
   }
 });
@@ -64,6 +61,7 @@ async function getApiResponse(word) {
 
 function displayData(dataResponse) {
   resultContainer.classList.remove("error-active"); // remove classlist incase this is added due to failed response
+  errorContainer.style.display = "none";
 
   console.log(dataResponse);
   // create a destructiong array of object
@@ -79,7 +77,6 @@ function displayData(dataResponse) {
   definingWord.appendChild(emphasis);
   emphasis.textContent = WORD_ATTR.word;
   WORD = WORD_ATTR.word; // for the audio
-  
 
   // display the phonetics
   displayPhonetics(WORD_ATTR);
@@ -89,8 +86,10 @@ function displayData(dataResponse) {
   // display all the part of speech definition, example
   // synonyms and antonyms
   displayDefinitions(WORD_ATTR);
-}
 
+  // display sentences
+  displaySentences(WORD_ATTR);
+}
 
 function displayDefinitions(WORD_ATTR) {
   // get the "meanings" container
@@ -182,10 +181,9 @@ function displayDefinitions(WORD_ATTR) {
   });
 }
 
+// get the links scroll container
+const linksContainer = document.querySelector(".partOfSpeech-scroll");
 function displayLinks(WORD_ATTR) {
-  // get the links scroll container
-  const linksContainer = document.querySelector(".partOfSpeech-scroll");
-
   if (WORD_ATTR) {
     linksContainer.replaceChildren();
     // kind of refresh the elements that would be display every searching a word
@@ -223,20 +221,14 @@ function displayPhonetics(WORD_ATTR) {
     }
   });
 }
-// play the audio
-wordAudio = document.getElementById("word-audio");
-wordAudio.addEventListener("click", () => {
-  var pronunciationAudio = new Audio(`https://ssl.gstatic.com/dictionary/static/sounds/20200429/${WORD}--_gb_1.mp3`);
-  pronunciationAudio.play();
-});
 
 // display ui for the Error 404 response of the api
 function displayErrorMessage() {
-  const errorContainer = document.querySelector(".error-container");
   // remove the current element on the result-set
   resultContainer.classList.add("error-active");
   if (resultContainer) {
     errorContainer.replaceChildren();
+    errorContainer.style.display = "block";
   }
 
   const errorBox = document.createElement("div");
@@ -260,21 +252,121 @@ function displayErrorMessage() {
   errorBox.appendChild(errorMessage);
 }
 
+// no sentences message
+const noMessageContainer = document.querySelector(".no-sentences-container");
+let isSentencesAvailable;
+// sentences content
+function displaySentences(WORD_ATTR) {
+  // get the "sentences" container
+  const sentencesContent = document.querySelector(".sentences-content");
+
+  if (WORD_ATTR) {
+    sentencesContent.replaceChildren();
+    // kind of refresh the elements that would be display every searching a word
+  }
+
+  WORD_ATTR.meanings.forEach((meaning) => {
+    // create div for the sentences
+    const sentencesContainer = document.createElement("div");
+    sentencesContainer.classList.add("sentences-container");
+    sentencesContent.appendChild(sentencesContainer);
+    sentencesContainer.setAttribute("id", meaning.partOfSpeech); // set the id of the divs for the scroll link
+
+    // create the card for every sentences
+    meaning.definitions.forEach((definition) => {
+      if (definition.example) {
+        isSentencesAvailable = true;
+        noMessageContainer.style.display = "none";
+        const sentenceCard = document.createElement("div");
+        sentenceCard.classList.add("sentences-card");
+        const sentenceElement = document.createElement("p");
+        // Define the word to be replaced and the HTML for the span element
+        let sentenceString = definition.example;
+        let wordToReplace = WORD_ATTR.word;
+        let replacementHTML = `<span class="sentence-word">${wordToReplace}</span>`;
+        // Create a regular expression to find the word, using 'gi' flag for global replacement and case-insensitive flag
+        let regex = new RegExp(`\\b${wordToReplace}\\b`, "gi");
+        // Replace the word with the span element
+        let outputElement = sentenceString.replace(regex, replacementHTML);
+        // set the innerHtml of the p element
+        sentenceElement.innerHTML = outputElement;
+        // then append it to the sentence card
+        sentenceCard.appendChild(sentenceElement);
+        // append the sentence card to the sentences container
+        sentencesContainer.appendChild(sentenceCard);
+      } else {
+        isSentencesAvailable = false;
+      }
+    });
+  });
+}
+
+// TABS - MEANING AND SENTENCES
+// select the div where buttons reside
+const tabs = document.querySelector(".buttons");
+// select all the buttons - tab
+const tabButtons = document.querySelectorAll(".button");
+// select all the contents div
+const contents = document.querySelectorAll(".contents");
+
+tabs.addEventListener("click", (e) => {
+  // get the value of the dataset of the button id
+  const id = e.target.dataset.id;
+  console.log(id);
+  if (id) {
+    tabButtons.forEach((tabButton) => {
+      tabButton.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    // set all the contents to non-active
+    contents.forEach((content) => {
+      content.classList.add("non-active");
+    });
+    // remove the non-active to the content that is clicked
+    const element = document.getElementById(id);
+    element.classList.remove("non-active");
+
+    // remove the links whenever user click tab sentence
+    if (id === "sentences") {
+      linksContainer.style.display = "none";
+      if (!isSentencesAvailable) {
+        noMessageContainer.style.display = "block";
+      }
+    } else {
+      if (!isSentencesAvailable && id === "meanings") {
+        noMessageContainer.style.display = "none";
+      }
+      linksContainer.style.display = "flex";
+    }
+  }
+});
+
+// play the audio
+wordAudio = document.getElementById("word-audio");
+wordAudio.addEventListener("click", () => {
+  var pronunciationAudio = new Audio(
+    `https://ssl.gstatic.com/dictionary/static/sounds/20200429/${WORD}--_gb_1.mp3`
+  );
+  pronunciationAudio.play();
+});
+
+// shift to homePage
+navLogo.addEventListener("click", () => {
+  window.location = "../pages/home.html";
+});
+
 // when user press the enter on searching
 // and the input is not empty
 document.onkeyup = (e) => {
   if (e.key == "Enter" && inputWord.value.length != 0) {
     e.preventDefault();
+
     location.replace("searchPage.html#searchedWord");
     getDataResponse();
   }
 };
 
 /* TO-DO 
-   1. audio of the word 
    2. tabs 
    3. homepage
-   5. error ui for word that does not exist in the API
-   6. footer
-
 */

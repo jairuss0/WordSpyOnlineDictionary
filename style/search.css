@@ -267,4 +267,48 @@ main .result-section .meaning-content .definition-container .antonym-container .
   border-radius: 1em;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
+}
+main .result-section .remove-links {
+  display: none;
+}
+main .result-section .sentences-content {
+  display: flex;
+  flex-direction: column;
+}
+main .result-section .sentences-content .sentences-container {
+  margin-top: 3em;
+}
+main .result-section .sentences-content .sentences-container .sentences-card {
+  border: 1px solid var(--bg-primary);
+  margin-bottom: 0.5em;
+  padding: 1em 0.5em 1em 0.9em;
+  max-width: 910px;
+  display: flex;
+  flex-direction: column;
+}
+main .result-section .sentences-content .sentences-container .sentences-card .sentence-word {
+  background-color: var(--color-blue);
+  color: var(--text-color);
+  padding: 0.1em;
+  font-weight: bold;
+}
+main .result-section .no-sentences-container {
+  margin: 0 auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: none;
+}
+main .result-section .no-sentences-container .no-sentences-message {
+  align-content: center;
+  text-align: center;
+}
+main .result-section .no-sentences-container .no-sentences-message .img-no-sentences {
+  max-width: 200px;
+}
+main .result-section .no-sentences-container .no-sentences-message .no-message {
+  color: var(--text-muted);
+  font-size: 1.5em;
+}
+main .result-section .non-active {
+  display: none;
 }/*# sourceMappingURL=search.css.map */

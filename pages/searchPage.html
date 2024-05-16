@@ -52,9 +52,8 @@
                 </div>
                 <!---TABS BUTTONS-->
                 <div class="buttons">
-                    <button class="button active" id="meanings" data-id="meanings">Meanings</button>
-                    <button class="button" id="Synonyms" data-id="synonyms">Synonyms</button>
-                    <button class="button" id="Sentences" data-id="sentences">Sentences</button>
+                    <button class="button active"  data-id="meanings">Meanings</button>
+                    <button class="button"  data-id="sentences">Sentences</button>
                 </div>
                 <div class="partOfSpeech-container">
                     <div class="partOfSpeech-scroll">
@@ -63,13 +62,33 @@
                     </div>
                 </div>
                 <!---MEANING-->
-                <div class="meaning-content">
+                <div class="meaning-content contents" id="meanings">
                     <!---create div for every part of speech result -->
                     
                         <!--create div card for the definitions and example-->
                         <!--create span for every synonyms and Antonyms-->            
                 </div>
+                <!---SENTENCES-->
+                <div class="sentences-content contents non-active" id="sentences">
+                    <!---create div for every part of speech result-->
+                    <div class="sentences-container">
+                        <!--create div card for the sentences-->
+                        <div class="sentences-card">
+                            <p>You Just Tried To Start Your Car With Your Cell Phone. <span class="sentence-word">Hello?</span></p>
+                        </div>
+                            
+                    </div>
+                    
+                </div>
                 
+                
+            </div>
+            <!--a note whenever the request word has no sentences within api-->
+            <div class="no-sentences-container">
+                <div class="no-sentences-message">
+                    <img src="../assets/noData.svg" alt="" class="img-no-sentences">
+                    <p class="no-message">'Sorry pal, we couldn't find Sentences for the word you were looking for.'</p>
+                </div>
             </div>
             <!---ERROR DISPLAY--->
             <div class="error-container">
