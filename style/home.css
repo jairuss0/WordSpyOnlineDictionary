@@ -18,7 +18,7 @@ main .hero-section {
   align-content: center;
   min-height: 77vh;
   margin-bottom: 1em;
-  background-color: #151515;
+  background-color: var(--bg-dark);
 }
 main .hero-section .hero-container {
   margin: 0 auto;
@@ -57,7 +57,7 @@ main .hero-section .hero-container div p {
 main .about-section {
   padding: 1em;
   min-height: 80vh;
-  background-color: #121212;
+  background-color: #151515;
   text-align: center;
   color: var(--secondary-text-color);
 }
