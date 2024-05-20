@@ -3,7 +3,7 @@
 :root {
   --bg-dark: #121212;
   --bg-primary: #181818;
-  --bg-secondary: #3a3b3c;
+  --bg-secondary: #282828;
   --text-color: #e4e6eb;
   --secondary-text-color: #aaaaaa;
   --color-blue: #3462b8;
@@ -18,6 +18,7 @@ main .hero-section {
   align-content: center;
   min-height: 77vh;
   margin-bottom: 1em;
+  background-color: #151515;
 }
 main .hero-section .hero-container {
   margin: 0 auto;
@@ -110,6 +111,137 @@ main .about-section .aboutus-container .aboutus-infos-box .aboutus-box .title-bo
 main .about-section .aboutus-container .aboutus-infos-box .aboutus-box p {
   text-align: right;
   font-size: 0.9em;
+}
+main .team-section {
+  color: var(--secondary-text-color);
+  min-height: 100vh;
+  padding: 1em;
+}
+main .team-section .team-container {
+  margin: 0 auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  align-content: center;
+  color: var(--text-color);
+}
+main .team-section .team-container .title {
+  text-align: center;
+}
+main .team-section .team-container .title h2 {
+  background: rgb(58, 113, 180);
+  background: linear-gradient(90deg, rgb(58, 113, 180) 0%, rgb(29, 253, 192) 51%, rgb(82, 69, 252) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  text-transform: capitalize;
+}
+main .team-section .team-container .container {
+  background-color: var(--bg-primary);
+  border-radius: 1em;
+  max-width: 470px;
+}
+main .team-section .team-container .container .review-container {
+  padding: 1em 1em;
+  border-radius: 1em;
+  text-align: center;
+}
+main .team-section .team-container .container .review-container .img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+main .team-section .team-container .container .review-container .img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+}
+main .team-section .team-container .container .review-container .img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--color-blue);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+main .team-section .team-container .container .review-container .img-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: var(--color-blue);
+  color: var(--text-color);
+}
+main .team-section .team-container .container .review-container #author {
+  text-transform: capitalize;
+  font-size: 1.2em;
+  margin: 0;
+  margin-bottom: 1em;
+}
+main .team-section .team-container .container .review-container #job {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+main .team-section .team-container .container .review-container #info {
+  color: var(--secondary-text-color);
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+main .team-section .team-container .container .review-container .btn-container {
+  margin-bottom: 1em;
+}
+main .team-section .team-container .container .review-container .btn-container .prev-btn,
+main .team-section .team-container .container .review-container .btn-container .next-btn {
+  background: transparent;
+  border: none;
+  margin-bottom: 1em;
+  width: 2em;
+  cursor: pointer;
+}
+main .team-section .team-container .container .review-container .btn-container .prev-btn i,
+main .team-section .team-container .container .review-container .btn-container .next-btn i {
+  font-size: 1.7em;
+  color: var(--secondary-text-color);
+}
+main .team-section .team-container .container .review-container .btn-container .prev-btn:hover i,
+main .team-section .team-container .container .review-container .btn-container .next-btn:hover i {
+  color: var(--color-lblue);
+}
+main .team-section .team-container .container .review-container .random-btn {
+  margin-bottom: 1em;
+  padding: 0.3em 0.5em;
+  background-color: var(--bg-secondary);
+  color: var(--primary-2nd);
+  border-radius: 0.5em;
+  text-transform: capitalize;
+  border: 1px solid var(--primary-2nd);
+  cursor: pointer;
+}
+main .team-section .team-container .container .review-container .random-btn:hover {
+  background-color: var(--color-blue);
+  color: #fff;
+  border: none;
+}
+main .team-section .team-container .container .review-container .fadeInAnimation {
+  animation: fadeOut; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.5s; /* don't forget to set a duration! */
 }
 
 @media (width <= 800px) {

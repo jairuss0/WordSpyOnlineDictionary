@@ -12,7 +12,7 @@
 
 footer{
     margin-top: 5em;
-    background-color: var(--bg-primary);
+    background-color:var(--bg-primary);
     min-height: 100px;
     align-content: center;
 }
