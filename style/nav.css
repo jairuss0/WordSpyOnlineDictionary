@@ -44,7 +44,7 @@ nav .nav-container {
 nav .nav-container .nav-logo span {
   font-family: "Oswald", sans-serif;
   font-size: 2.5em;
-  color: var(--color-blue);
+  color: var(--text-color);
 }
 nav .nav-container .nav-logo{
   cursor: pointer;
@@ -52,13 +52,29 @@ nav .nav-container .nav-logo{
 nav .nav-container .nav-logo .span1 {
   font-family: "Oswald", sans-serif;
   font-size: 2.5em;
-  color: var(--text-color);
+  background: rgb(58, 113, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(58, 113, 180, 1) 0%,
+    rgba(29, 235, 253, 1) 50%,
+    rgba(82, 69, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 nav .nav-container .nav-logo i {
   font-size: 2.5em;
   margin-right: 0.2em;
-  color: var(--color-blue);
+  background: rgb(58, 113, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(58, 113, 180, 1) 0%,
+    rgba(29, 235, 253, 1) 50%,
+    rgba(82, 69, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 nav .nav-container ul {
   display: flex;
