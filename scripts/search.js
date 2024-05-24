@@ -296,6 +296,7 @@ function displaySentences(WORD_ATTR) {
         sentencesContainer.appendChild(sentenceCard);
       } else {
         isSentencesAvailable = false;
+        
       }
     });
   });
@@ -330,10 +331,14 @@ tabs.addEventListener("click", (e) => {
     if (id === "sentences") {
       linksContainer.style.display = "none";
       if (!isSentencesAvailable) {
-        noMessageContainer.style.display = "block";
+        noMessageContainer.style.display = "none";
       }
+      
     } else {
-      if (!isSentencesAvailable && id === "meanings") {
+      if (!isSentencesAvailable && id == "meanings") {
+        noMessageContainer.style.display = "none";
+      }
+      else if(isSentencesAvailable && id === "sentences"){
         noMessageContainer.style.display = "none";
       }
       linksContainer.style.display = "flex";
