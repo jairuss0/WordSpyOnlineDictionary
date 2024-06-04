@@ -1,5 +1,6 @@
-## WordSpy - a simple online Dictionary
+## WordSpy - A Simple Online Dictionary!
 - wordSpy's definitions, pronunciations, usage examples, antonyms, and synonyms are all meant to make it easier to find words.
+- No log-in, No Registration, just straight up seek what word you want to know!
 
 
 ### Limitation:
