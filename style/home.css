@@ -44,6 +44,7 @@ main .hero-section .hero-container a:hover {
   background: linear-gradient(90deg, rgb(58, 113, 180) 0%, rgb(29, 253, 192) 51%, rgb(82, 69, 252) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  border: var(--bg-secondary) solid 1px;
 }
 main .hero-section .hero-container div {
   max-width: 980px;
@@ -55,9 +56,8 @@ main .hero-section .hero-container div p {
   color: var(--secondary-text-color);
 }
 main .about-section {
-  padding: 1em;
-  min-height: 90vh;
-  background-color: #151515;
+  align-content: center;
+  min-height: 100vh;
   text-align: center;
   color: var(--secondary-text-color);
 }
@@ -74,7 +74,7 @@ main .about-section .aboutus-container .aboutUs-sentence {
   align-content: center;
 }
 main .about-section .aboutus-container .aboutUs-sentence P {
-  text-align: justify;
+  text-align: left;
 }
 main .about-section .aboutus-container .aboutUs-sentence h3 {
   font-size: 3em;
@@ -92,14 +92,15 @@ main .about-section .aboutus-container .aboutus-infos-box {
   flex: 1;
 }
 main .about-section .aboutus-container .aboutus-infos-box .aboutus-box {
-  padding: 0em 1em;
-  background-color: var(--bg-dark);
-  border: 1px solid var(--bg-primary);
+  padding: 0.5em 1em;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-secondary);
+  border-radius: 0.5em;
 }
 main .about-section .aboutus-container .aboutus-infos-box .aboutus-box .title-box {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   gap: 0.3em;
 }
 main .about-section .aboutus-container .aboutus-infos-box .aboutus-box .title-box img {
@@ -109,7 +110,7 @@ main .about-section .aboutus-container .aboutus-infos-box .aboutus-box .title-bo
   color: var(--text-color);
 }
 main .about-section .aboutus-container .aboutus-infos-box .aboutus-box p {
-  text-align: right;
+  text-align: left;
   font-size: 0.9em;
 }
 main .team-section {

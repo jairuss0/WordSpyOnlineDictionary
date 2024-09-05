@@ -53,6 +53,7 @@ main {
                     );
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    border: var(--bg-secondary) solid 1px;
                 }
             }
             div {
@@ -68,9 +69,8 @@ main {
     }
 
     .about-section {
-        padding: 1em;
-        min-height: 90vh;
-        background-color: #151515;
+        align-content: center;
+        min-height: 100vh;
         text-align: center;
         color: var(--secondary-text-color);
 
@@ -85,7 +85,7 @@ main {
                 padding: 1em 1.5em;
                 align-content: center;
                 P {
-                    text-align: justify;
+                    text-align: left;
                 }
                 h3 {
                     font-size: 3em;
@@ -108,13 +108,14 @@ main {
                 flex-wrap: wrap;
                 flex: 1;
                 .aboutus-box {
-                    padding: 0em 1em;
-                    background-color: var(--bg-dark);
-                    border: 1px solid var(--bg-primary);
+                    padding: .5em 1em;
+                    background-color: var(--bg-primary);
+                    border: 1px solid var(--bg-secondary);
+                    border-radius: .5em;
                     .title-box {
                         display: flex;
                         align-items: center;
-                        justify-content: end;
+                        justify-content: start;
                         gap: 0.3em;
                         img {
                             max-width: 50px;
@@ -125,7 +126,7 @@ main {
                     }
 
                     p {
-                        text-align: right;
+                        text-align: left;
                         font-size: 0.9em;
                     }
                 }

@@ -23,13 +23,17 @@ searchIcon.addEventListener("click", (e) => {
 
 // load initial word
 document.addEventListener("DOMContentLoaded", async () => {
+  loadInitialWord();
+});
+
+async function loadInitialWord(){
   try {
     const dataResponse = await getApiResponse("hello");
     displayData(dataResponse);
   } catch (error) {
     console.error(error);
   }
-});
+}
 
 // get the response
 async function getDataResponse() {
@@ -371,7 +375,3 @@ document.onkeyup = (e) => {
   }
 };
 
-/* TO-DO 
-   2. tabs 
-   3. homepage
-*/
