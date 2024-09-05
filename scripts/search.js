@@ -15,8 +15,6 @@ const errorContainer = document.querySelector(".error-container");
 searchIcon.addEventListener("click", (e) => {
   if (inputWord.value.length != 0) {
     e.preventDefault();
-
-    location.replace("searchPage.html#searchedWord");
     getDataResponse();
   }
 });
@@ -369,8 +367,6 @@ navLogo.addEventListener("click", () => {
 document.onkeyup = (e) => {
   if (e.key == "Enter" && inputWord.value.length != 0) {
     e.preventDefault();
-
-    location.replace("searchPage.html#searchedWord");
     getDataResponse();
   }
 };
