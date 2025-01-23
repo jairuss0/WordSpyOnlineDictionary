@@ -6,6 +6,7 @@
 - Considering the website depends on the API for resources, it cannot give users with access to the most recent slang and terminology.
 
 ## CHECK THE WEBSITE DEMO
+- https://explorewordspy.netlify.app/
 
 ### API USED
 - https://dictionaryapi.dev/ 
