@@ -5,11 +5,14 @@
 ### Limitation:
 - Considering the website depends on the API for resources, it cannot give users with access to the most recent slang and terminology.
 
+## CHECK THE WEBSITE DEMO
 
 ### API USED
 - https://dictionaryapi.dev/ 
 
-### Note
+> [!NOTE]
 - By making a donation, you can help freeDictionayAPI maintain the server and carry on with Dictionary API development.
-- This project was created specifically for a school project.
 
+
+> [!WARNING]
+> This project was created specifically for a school project. No copyright infringement is intended
