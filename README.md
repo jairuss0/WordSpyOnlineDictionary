@@ -12,7 +12,7 @@
 - https://dictionaryapi.dev/ 
 
 > [!NOTE]
-- By making a donation, you can help freeDictionayAPI maintain the server and carry on with Dictionary API development.
+> By making a donation, you can help freeDictionayAPI maintain the server and carry on with Dictionary API development.
 
 
 > [!WARNING]
